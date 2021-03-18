@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Create admin account</title>
+    <script rel="script" src="core.js"></script>
+    <script rel="script" src="md5.js"></script>
+    <script rel="script" src="admin_account.js"></script>
+</head>
+<body>
+<div>
+<label for="login">Login:</label>
+<input id="login" style="width: 200px;"></input>
+<label for="hasło">Hasło:</label>
+<input id="hasło" style="width: 200px;"></input>
+<label for="email">Email:</label>
+<input id="email" style="width: 200px;"></input>
+<label for="imie">Imie:</label>
+<input id="imie" style="width: 200px;"></input>
+<label for="nazwisko">Nazwisko:</label>
+<input id="nazwisko" style="width: 200px;"></input>
+<button id="create" style="width: 200px; height: 20px;" onclick="makeAccount()">Załóż konto</button>
+</div>
+</body>
+
+
+<script>
+onEnter(['login', 'hasło'], "create");
+
+</script>
+
+

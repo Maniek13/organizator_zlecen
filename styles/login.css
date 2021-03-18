@@ -1,0 +1,499 @@
+
+
+  html, body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    background: #151A2E;
+  }
+
+  button, select{
+    cursor: pointer ;
+  }
+
+  textarea, input{
+    cursor: text ;
+  }
+
+  button, select, label, input, p, h1, div{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  input:focus {
+    border: 0px!important;
+    outline: 2px solid rgb(18, 165, 18);
+    background-color: white;
+    color: black;
+  }
+
+  input:focus + #show{
+    filter: invert(0);
+  }
+
+  button{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    width: 200px;
+    align-self: center;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    overflow: hidden;
+  }
+  
+  button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  button:active:after {
+    opacity: 1;
+    transition: 0s;
+    padding-left: 0%;
+  }
+
+  .logowanie {
+    position: absolute;
+    left: 50%;
+    top:  30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    width: 500px;
+  }
+
+  h1{
+    white-space: nowrap;
+    font-size: xxx-large;
+    margin-top: 0px;
+  }
+
+  #menu{
+    display: block;
+    position: relative;
+    padding: 10px 0px 10px 0px;
+  } 
+
+  #lab div {
+    width: 40%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  input{
+    color: white;
+    vertical-align: middle;
+    border: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width: 40%;
+    height: 25px;
+    padding-left: 5px;
+    margin-top: 5px;
+  }
+
+  #login, #password{
+    margin-top: 10px;
+  }
+
+  #show{
+    position: absolute;
+    bottom: 10px;
+    right: 150px;
+    width: 15px;
+    height: 15px;
+    border: hidden;
+    z-index: 500;
+    filter: invert(100%);
+    background-repeat: no-repeat;
+  }
+  
+  #zaloguj{
+    width: 100%;
+  }
+
+  #zmiana_hasła{
+    color: white;
+    top: 30%;
+    width: 300px;
+    border: 1px solid red;
+    background-color: orange;
+    z-index: 1000;
+    padding-top: 40px;
+  }
+
+  #lab_pas div{
+    width:50%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  #pas {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  #pas input{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #zmiana_hasła_button{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  } 
+ 
+  #zmiana_hasła #show {
+    right: 2px;
+    top: 10px;
+  }
+
+  #error_pas1 {
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+
+  .field-error {
+    border: 0px!important;
+    outline: 1px solid red;
+  }
+
+  #pas_zmiana .field-error{
+    filter: invert(0);
+  }
+  
+  .logowanie #error_log,  .logowanie #error_pas {
+    width: 100%;
+    top: 110%;
+    font-size: 12px;
+    color: white;
+    background-color: rgb(255, 72, 0);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+  }
+
+  .error_data {
+    width: 100%;
+    color: red;
+    display: inline-block;
+    padding-top: 2px;
+    text-align: justify;
+    font-size: 12px;
+  }
+
+
+@media only screen and (max-width: 950px){
+    #zmiana_hasła {
+        top: 45%;
+    }
+    .logowanie {
+      top: 45%;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    #show {
+      right: 150px;
+    }
+}
+
+@media only screen and (max-width: 880px){
+  #show {
+      right: 149px;
+  }
+}
+
+@media only screen and (max-width: 820px){
+    #login_lab, #password_lab{
+      font-size: 22px;
+    }
+
+    #show {
+      right: 100px;
+    }
+
+    #zaloguj {
+      margin-top: 20px;
+    }
+
+    .logowanie{
+      font-size: 18px;
+      padding: 5%;
+      top: 40%;
+    }
+
+    #zmiana_hasła {
+      top: 38%;
+    }
+
+    input, #lab div {
+        width: 60%;
+    }
+  
+}
+
+@media only screen and (max-width: 800px){
+  #zmiana_hasła {
+      top: 38%!important;
+  }
+}
+
+@media only screen and (max-width: 640px) {    
+  .logowanie {
+    top: 40%;
+    font-size: 22px;
+    width: 90%;
+  }
+
+  #login {
+      margin-left: -1px;
+  }
+
+  input, #lab div {
+    width: 30%;
+  }
+
+  #zaloguj {
+    margin-top: 10px!important;
+  }
+
+  #show {
+    right: 200px;
+  }
+}
+
+@media only screen and (max-width: 610px) {    
+  #show {
+    right: 195px;
+  }
+}
+
+@media only screen and (max-width: 600px) {    
+  h1 {
+    white-space: pre-line; 
+  }
+
+  #show {
+    right: 187px;
+  }
+
+}
+
+@media only screen and (max-width: 580px) {  
+  #show {
+    right: 183px;
+  }
+}
+
+@media only screen and (max-width: 560px) {  
+  #show {
+    right: 176px;
+  }
+}
+
+@media only screen and (max-width: 540px) {  
+  #show {
+    right: 170px;
+  }
+}
+
+@media only screen and (max-width: 520px) {  
+  #show {
+    right: 163px;
+  }
+}
+
+@media only screen and (max-width: 500px) {    
+  input, #lab div {
+    width: 40%;
+  }
+  #show { 
+    right: 135px;
+  }
+ 
+  p {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {  
+  #show {
+    right: 130px;
+  }
+}
+
+@media only screen and (max-width: 460px) {  
+  #show {
+    right: 125px;
+  }
+}
+
+@media only screen and (max-width: 440px) {  
+  #show {
+    right: 118px;
+  }
+}
+
+@media only screen and (max-width: 420px){
+  #show {
+    right: 112px;
+  }
+}
+
+@media only screen and (max-width: 375px){
+  input, #lab div {
+    width: 50%;
+  }
+
+  #show{
+    right: 85px;
+  }
+
+  #zmiana_hasła {
+    top: 39%!important;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  input, #lab div {
+    width: 50%;
+  }
+
+  #zmiana_hasła {
+    top: 40%!important;
+  }
+
+  #show {
+    right: 82px;
+  }
+}
+
+@media only screen and (max-width: 320px) {     
+  #show {
+    right: 65px;
+  }
+
+  input, #lab div {
+    width: 55%;
+  }
+
+  #zmiana_hasła {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 300px) {    
+  .logowanie{
+    width: auto;
+  }
+
+  #show {
+    right: 55px;
+  }
+
+  #zmiana_hasła {
+    width: 200px;
+    top: 42%!important;
+  }
+
+  #pas, #lab_pas div {
+    width: 70%;
+  }
+
+  #zmiana_hasła #show {
+    right: 0px;
+  }
+
+  h1{
+    font-size: 2em;
+  }
+}
+
+@media only screen  and (max-width: 850px) and (orientation: landscape) {
+  h1{
+    font-size: x-large;
+  }
+  
+  p{
+    font-size: medium;
+  }
+
+  input, #lab div {
+    width: 30%;
+    font-size: small;
+  }
+
+  .logowanie {
+    top: 50%;
+  }
+
+  button {
+    width: 150px;
+  }
+
+  #zaloguj{
+    margin-top: 0px;
+  }
+
+  #show {
+    right: 175px;
+  }
+  #zmiana_hasła {
+    top: 35%!important;
+  }
+}
+@media only screen  and (max-width: 653px) and (orientation: landscape) {
+
+  #zmiana_hasła {
+    top: 30%!important;
+  }
+}
+
+@media only screen  and (max-width: 650px) and (orientation: landscape) {
+  #show {
+    right: 200px;
+  }
+}
+
+@media only screen  and (max-width: 600px) and (orientation: landscape) {
+  #show {
+    right: 180px;
+  }
+
+  #zmiana_hasła {
+    top: 25%!important;
+  }
+}
+
+
+
+
+
+

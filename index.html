@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>APK</title>
+</head>
+<body></body>
+
+<script>
+
+window.onload = (event) => {
+    let myCookie = readCookie("admin_log");
+	let myCookie2 = readCookie("usser");
+
+	if (myCookie == null) {
+		if (myCookie2 == null) {
+			location.href= "login.html";
+		}
+		else {
+			location.href= "usser.html";
+		}	
+	}
+	else {
+		location.href= "main.html";
+	}
+};
+
+
+function readCookie(cookieName) {
+	cookieValue = readUnescapedCookie(cookieName)
+	
+	if (cookieValue != null) {
+		cookieValue = unescape(cookieValue);
+	}
+	return cookieValue;
+}
+
+function readUnescapedCookie(cookieName) {
+	var cookieValue = document.cookie;
+	var cookieRegExp = new RegExp("\\b" + cookieName 
+		+ "=([^;]*)");
+	
+		cookieValue = cookieRegExp.exec(cookieValue);
+
+	
+	if (cookieValue != null) {
+		cookieValue = cookieValue[1];
+	}
+	return cookieValue;
+}
+
+</script>
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Organizator Zleceń</title>
+    <script src="JavaScript/jquery-3.5.1.js"></script>
+    <script rel="script" src="JavaScript/login.js" ></script>
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="styles/notification.css">
+    <script rel="script" src="JavaScript/core.js"></script>
+    <script rel="script" src="JavaScript/md5.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="kontener">
+   
+    <div class="logowanie">
+
+    <h1>Organizator Zleceń</h1>
+    <p>Aplikacja do zarządzania zleceniami</p>
+    <div id="menu">
+      <div id="login">
+        <div id ="lab"><div>Login</div></div>
+        <div>
+          <input id="login1"/>
+        </div>
+        
+      </div>
+      <div id="password">
+        <div id="lab"><div>Hasło</div></div>
+        <div>
+          <input id="hasło" type="password">
+          <button id="show"  style=" background-image: url('icons/password.svg');" onclick="schowPassword('hasło')" ></button>
+        </div>
+      </div>
+    </div>
+    <div id="zaloguj">
+      <div>
+        <button id="log" onclick="logIn()">Zaloguj</button>
+        <p id ="error_log" style="visibility: hidden;"></p>
+        <p id ="error_pas" style="visibility: hidden;"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<dialog id="zmiana_hasła">
+    <div id="pas_zmiana">
+      <div id="lab_pas">
+        <div>Podaj nowe hasło:</div>
+      </div>
+      <div id="pas">
+          <input id="hasło1" type="password"/>
+        <button id="show"  style=" background-image: url('icons/password.svg');" onclick="schowPassword('hasło1')" ></button>
+      </div>
+      
+      <div id="lab_pas">
+        <div>Powtórz hasło:</div>
+      </div>
+      <div id="pas">
+        <input id="hasło2" type="password"/>
+        <button id="show"  style=" background-image: url('icons/password.svg');" onclick="schowPassword('hasło2')" ></button>
+      </div>
+    </div>
+    <div id="zmiana_hasła_button">
+      <button id="zmiana" onclick="changePassword()">Potwierdź</button>
+    </div>
+</dialog>
+</body>
+
+<script>
+$("input").attr("autocomplete", "off");
+onEnter(['login1', 'hasło', 'hasło1', 'hasło2'], 'log');
+onEnter(['hasło1', 'hasło2'], 'zmiana');
+login();
+walidPassword("#hasło1", "#hasło2", "zmiana");
+</script>
+
+</html>
+

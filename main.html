@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>APK</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/notification.css">
+    <script src="JavaScript/jquery-3.5.1.js"></script>
+    <script rel="script" src="JavaScript/main.js" ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="styles/datepicker.css" rel="stylesheet" type="text/css">
+    <script src="JavaScript/datepicker.js"></script>
+    <script rel="JavaScript/script" src="core.js"></script>
+    <script rel="JavaScript/script" src="md5.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div style="text-align:center;" id="belka_wyloguj">
+        <div id="logout">
+            <button id="main" onclick="location.href='index.html'">Administrator</button>
+            <button id="wyloguj" onclick="logout()" style="background-image: url(icons/logout.svg);"></button>
+            <button id="settings" onclick="settingsAdmin()" style="background-image: url(icons/gear.svg);"></button>
+            <button id="send_email" onclick="email()" style="background-image: url('icons/send.svg');"></button>
+            <button id="categorys" onclick="categorys()">Kategorie</button>
+            <button id="employes" onclick="pracownicy()">Pracownicy</button>
+            <button id="showTask" onclick="btnShow()">Zlecenia</button>
+        </div>
+    </div>
+    <div class="placeholder" id="placeholder"></div>
+</body>
+
+
+<script>
+main();
+checkCookie("admin_log");
+btnShow();
+</script>
+
+</html>
+

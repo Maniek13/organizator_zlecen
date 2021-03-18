@@ -1,0 +1,1487 @@
+html, body {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+button, select{
+  cursor: pointer ;
+}
+
+textarea, input{
+  cursor: text ;
+}
+
+#rozmazanie {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000bd;
+  z-index: 1;
+  top: 0;
+}
+
+#ad_form label, #emp_form label, #category_new label, #settings_form label{
+  font-size: 14px;
+}
+
+#okno_potwierdzenia {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 250px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  padding: 25px;
+  border-radius: 5px;
+  margin: 0;
+  z-index: 1;
+  min-width: 200px;
+}
+
+#okno_potwierdzenia button{
+  margin-top: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+
+#tak_potw {
+  margin-left: 50px;
+}
+
+.usser, .objekt , #ogloszenia{
+  position: relative;
+}
+
+.podglad{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  min-width: 400px;
+  text-align: center;
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px;
+  z-index: 1000;
+  padding-top: 30px;
+}
+
+.podglad div {
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  float: left;
+  padding: 5px 0px 5px 25px;
+  width: 90%;
+  text-align: left;
+  margin-bottom: 10px;
+  background-position: 0% 40%!important;
+}
+
+.podglad button#edytuj1, .podglad button#wyłącz {
+  position: absolute;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url('icons/button/pencil.png');
+}
+
+.podglad button#edytuj1{
+  right: 35px;
+}
+
+.podglad button#wyłącz {
+  right: 10px;
+}
+
+div#opis {
+  overflow: auto;
+  max-height: 210px;
+  text-align: justify ;
+  background-position: 0% 3px;
+}
+
+#schow_info {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+button, select, label, input, p, h1, div{
+  font-family: 'Roboto', sans-serif;
+  border: 0px;
+}
+
+input, select, #form_input #data, textarea{
+  box-sizing: border-box;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 1px!important;
+  font-size: 16px;
+}
+
+textarea{
+  width: 100%;
+  margin-top: 10px;
+  height: 100px;
+  resize: vertical;
+  border: 1px solid #151a2e52;
+}
+
+.tooltip {
+  visibility: hidden;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 0px;
+  background-color: gold;
+}
+
+button:hover .tooltip{
+  visibility: visible;
+}
+
+#filtry select{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.f1{
+  margin-right: auto; 
+}
+
+.f2, .f3 {
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.f4 {
+  margin-left: auto;
+}
+
+
+button#reset {
+  margin-top: 20px;
+}
+
+*:focus {
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus{
+  border: 0px!important;
+  outline: 1px solid green;
+}
+
+.field-error{
+  border: 0px!important;
+  outline: 1px solid red!important;
+}
+
+#pomoc{
+  width: 100%;
+  display: table;
+}
+
+#settings_form, #cat_form{
+  width: 500px!important;
+}
+
+#belka_wyloguj{
+  width: 100%;
+  height: 7%;
+}
+
+#logout{
+  background-color: #151A2E;
+  text-align: center;
+  font-size: 24px;
+  height: 100%;
+  border-bottom: 1px solid #1e2541;
+  position: relative;
+  padding-right: calc(20% + 20px);
+  padding-left: calc(20% + 20px);
+
+}
+
+#main{
+  position: relative;
+  background-color: transparent;
+  border: 0px;
+  width: 250px;
+  float: left;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
+#settings, #wyloguj, #employes, #categorys, #showTask, #send_email, #send_email{
+  position: relative;
+  background-color: transparent;
+  border: hidden;
+  float: right;
+  height: 100%;
+  padding: 0 15px 0 15px;
+}
+
+#settings, #wyloguj, #send_email, #send_email{
+  width:  5%;
+  filter: invert(100%);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: 50% 50%;
+}
+
+#send_email{
+  border-left: 1px solid #E1DABE;
+}
+
+#wyloguj{
+  border-right: 1px solid #E1DABE;
+}
+
+#employes, #showTask, #categorys{
+  font-size: 24px;
+  color: white;
+}
+
+#placeholder{
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 20% 0 20%;
+    height: 93%;
+    overflow: auto;
+}
+
+#opis::-webkit-scrollbar, textarea::-webkit-scrollbar{
+  width: 2px;
+}
+
+#placeholder::-webkit-scrollbar-thumb, #opis::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb {
+  background-color: #151A2E;
+  border-radius: 20px 20px;
+}
+
+#ogloszenia, #lista{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.ogloszenie, .usser, .objekt, #task_msg{
+  text-align: center;
+  background-color: white;
+  margin-top: 10px;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  display: inline-block;
+  padding: 25px;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+.usser, .objekt, #task_msg{
+  padding-bottom: 25px;
+}
+
+#ogloszenia .ogloszenie:only-child, #lista .usser:only-child {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ogloszenie{
+  position: relative;
+}
+
+.edit a{
+  margin-left: 12px;
+}
+
+#task_btns #zakoncz{
+  margin-top: 20px;
+}
+
+#task_btns #usuń{
+  width: 60px;
+}
+
+#edytuj a,  #usuń a{
+  margin-left: 10px;
+}
+
+#zakoncz a {
+  margin-left: 15px;
+}
+
+#lista .usser:only-child {
+  max-width: 300px!important;
+}
+
+#str_tytułowa{
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 10px 3px #ccc;
+}
+
+#str_tytułowa h1 {
+  padding: 50px 0px 50px 0px;
+}
+
+#zdjecie{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+}
+
+.objekt{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.ogloszenie, .usser{
+  margin: 10px;
+  flex: 250px;
+  min-width: 400px;
+}
+
+.objekt div {
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+
+.objekt #usuń{
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  margin-left: 5px;
+}
+
+.objekt:hover #usuń{
+  visibility: visible;
+}
+
+.objekt #tekst{
+  text-align: left;
+}
+
+#cat_btns {
+  float: right;
+}
+
+
+#formularz{
+    padding: 20px 25px 20px 25px;
+}
+
+#przyciski{
+  height: 10%;
+  width: 100%;
+}
+
+#przyciski button{
+  border: 1px solid  rgb(184, 178, 158);
+  border-radius: 15px;
+  background-color: rgb(234, 229, 209);
+  filter: invert(100%);
+  font-weight: bold;
+  width: 250px;
+  height: 50px;
+}
+
+#add_task, #add_emp, #add_cat{
+    background-image: url("icons/plus.png");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 20px 50%;
+}
+
+#add_task div, #add_emp div, #add_cat div{
+  margin-left: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+  
+#formularz p{
+  padding-left: 30px;
+  text-align: left;
+  box-sizing: border-box;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+
+#task_msg p{
+  padding-left: 0px;
+  text-align: center;
+}
+
+#task_msg {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#tytuł{
+  text-align: center!important;
+  padding: 0px 0px 20px 0px!important;
+}
+
+#filtry, #przyciski, #filtry_reset{
+  padding: 0px 0px 20px 0px;
+}
+
+#filtry{
+  display: inline-flex;
+  height: 100px;
+  width: 100%;
+}
+
+#filtr_div_f{
+  position: relative;
+  width: 200px;
+  float: left;
+  display: block;
+  margin-top: 20px;
+}
+
+#filtr_div_f label{
+  position: absolute;
+  top: 0%;
+  float: left;
+}
+
+#filtr_div_f select, #filtr_div_f input{
+  position: absolute;
+  top: 50%;
+  float: left;
+  width: 100%;
+}
+
+#filtr_div_f select, #filtr_div_f input, #add_cat input{
+  border-bottom: 1px solid #1e2541;
+  background-color: transparent;
+}
+
+#filtry_reset{
+  padding-top: 0px!important;
+  margin-bottom: 20px;
+}
+
+#filtry{
+  padding-bottom: 0px!important;
+}
+
+#reset{
+  background-color: transparent;
+}
+
+#data{
+  background-repeat: no-repeat;
+  background-position: 99.2% 50%;
+  background-size: 15px 15px;
+  margin-top: 0px;
+}
+
+#task_btns button, .objekt button, #usser_btn button, .objekt a{
+  position: relative;
+  background-color: transparent;
+  background-position: 0% 50%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  width: 70px;
+}
+
+.objekt button{
+  width: 80px;
+}
+
+#task{
+  height: 80%;
+}
+
+#cat_t_text, #settings_title{ 
+display: inline-block;
+}
+
+#cat_btn_new, #change_password, #cofnij_pass, #change_email{
+  float: right;
+}
+
+#cat_btn_new button, #change_password, #cofnij_pass, #change_email{
+  position: relative;
+  background-color: transparent;
+  background-position: 0% 50%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+#task_btns, #usser_btn {
+  float: right;
+  height: 20px;
+}
+
+#usser_btn{
+  margin-top: 20px;
+}
+
+#category_new{
+  margin-top: 50px;
+  background-color: transparent;
+  background-position: 5px 100%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50px;
+}
+
+#category_new input{
+ margin-top: 10px;
+}
+
+#usser_tekst{
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+
+#cat_form, #ad_form, #emp_form, #settings_form, #folder{
+  position: relative;
+  background-color: white;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  width: 70%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: block;
+  border-radius: 5px;
+}
+
+#cat_form, #ad_form, #emp_form, #settings_form{
+  padding: 50px 50px 50px 50px;
+}
+
+#folder{
+  padding: 30px 50px 50px 50px;
+}
+
+#cat_form{
+  min-height: 180px;
+}
+
+#cat_form input, #ad_form input, #ad_form select, #emp_form input, #emp_form select, #settings_form input{
+  width: 100%;
+  border-bottom: 1px solid #151a2e52;;
+  background-color: transparent;
+}
+
+#ad_form label, #emp_form label{
+  background-color: transparent;
+  position:  relative;
+}
+
+#tytuł_form, #cat_title, #change_pass{
+  font-weight: bold;
+}
+
+#form_form{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#ad_title, #emp_title{
+  font-size: large;
+  font-weight: bold;
+  display: inline-block;
+}
+
+#ad_title, #emp_title, #cat_t_text{
+ padding-top: 8px;
+}
+
+#form_input, #cat_inp, #tytuł_form, #cat_title, #change_pass{
+  width: 92%;
+  float: right;
+}
+
+#settings_form #form_input, #change_pass {
+  width: 90%;
+  float: right;
+}
+
+#ad_btns, #emp_btns{
+  float: right;
+}
+
+#ad_btns button, #emp_btns button{
+  position: relative;
+  width: 25px;
+  height: 20px;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+#ad_form, #folder {
+  display: block;
+  padding-bottom: 50px;
+  height: auto !important;
+}
+
+#cat_form, #ad_form, #settings_form, #formularz, #emp_form, #folder{
+  box-sizing: border-box;
+}
+
+.pole, .pole_opis {
+  position: relative;
+  width: 100%;
+  background-color: transparent;
+  background-position: 10px 90%;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  height: 50px;
+}
+
+#pole_opis{
+  height: 100px;
+}
+
+.pole label, .pole_opis label{
+  font-size: smaller;
+  color: #151A2E;
+}
+
+#settings_form .pole{
+  background-position: 10px 90%;
+}
+
+#icon_file{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.error_data {
+  width: 100%;
+  font-size: 12px;
+  display: table;
+}
+
+.error_data div {
+  color: red;
+  background-color: transparent;
+  width: 92%;
+  float: right;
+}
+
+#cat_inp .error_data div{
+  width: 100%;
+  margin-right: 0%;
+}
+
+#wiadomosc{
+  position: relative;
+  text-align: center;
+  height: 50%;
+}
+
+#password_show{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  border: hidden;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.upload {
+	position: relative;
+  overflow: hidden;
+	padding: 8px!important;
+	text-align: left;
+  font-size: medium;
+  background-color:transparent;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 15px 15px;
+  margin-top: 20px;
+}
+
+#upload-label {
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: ellipsis;  
+}
+
+.upload div{
+  width: 100%;
+  padding: 0px!important;
+}
+
+#send{
+  position: absolute;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  top: 31px;
+  right: 51px;
+}
+
+#folder h1{
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.upload input[type="file"] {
+	position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+	height: 100%;
+  opacity: 0;
+}
+
+#upload-label a{
+  background-color: transparent!important;
+}
+
+#admin{
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding-left: 0px!important;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.549);
+}
+
+label[for=admin] {
+  margin-left: 5px;
+}
+
+#form label, #form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#form label, #admin{
+  font-size: 14px;
+}
+
+#form input {
+  margin: 5px 0px 5px 0px;
+  border-bottom: 1px solid rgba(184, 184, 184, 0.549);
+  font-size: 16px;
+}
+
+#form .error_data div {
+  width: 100%;
+  float: left;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 42%;
+  left: 45%;
+  z-index: 10000;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1800px) {    
+  #form_input, #cat_inp, #tytuł_form, #cat_title, #change_pass, .error_data div{
+    width: 91%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {    
+
+  #placeholder{
+    padding: 0 10% 0 10%;
+  }
+  
+  #logout {
+    padding-right: calc(10% + 20px);
+    padding-left: calc(10% + 20px);
+  }
+}
+
+@media only screen and (max-width: 1300px) {    
+  #employes, #showTask,#categorys, #main{
+    font-size: 20px;
+  } 
+
+  #settings, #wyloguj, #send_email, #send_email {
+    width: 6%;
+  }
+  .pole, .pole_opis{
+    background-size: 15px 15px; 
+  }
+  
+  #change_pass {
+    width: 90%;
+  }
+
+  #placeholder{
+    padding: 0 5% 0 5%;
+  }
+  
+  #logout {
+    padding-right: calc(5% + 20px);
+    padding-left: calc(5% + 20px);
+  }
+  
+}
+
+@media only screen and (max-width: 1100px) {    
+  #employes, #showTask ,#categorys, #main{
+    font-size: 18px;
+  } 
+
+  #main{
+    width: 200px;
+  }
+
+  #settings, #wyloguj, #send_email, #send_email {
+      background-size: 20px 20px;
+  }
+
+  #przyciski button{
+    background-size: 20px 20px;
+    width: 200px;
+    height: 40px;
+  }
+
+  #przyciski button div{
+   font-size: small;
+  }
+
+  #task_btns button, .objekt button, #usser_btn button {
+    width: 80px;
+}
+
+  #placeholder{
+    padding: 0 0 0 0;
+  }
+  
+  #logout {
+    padding-right: calc(0% + 20px);
+    padding-left: calc(0% + 20px);
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-height: 1100px) {    
+  #settings, #wyloguj, #send_email, #send_email {
+    background-size: 30px 30px;
+  }
+
+  #send_email {
+    width: 7%;
+  }
+
+  #employes, #showTask, #categorys, #main {
+    font-size: 26px;
+  }
+
+  #main {
+    width: 210px;
+  }
+}
+
+
+@media only screen  and (max-width: 900px)  {
+  #filtr_div_f {
+    width: 150px;
+  }
+}
+
+@media only screen  and (max-width: 800px)  {
+  .lds-ring {
+    left: 44%;
+  }
+
+  .pole, .pole_opis {
+    background-position: 0px 90%;
+  }
+}
+
+@media only screen and (max-width: 740px) {    
+  #form_input, #cat_inp, #tytuł_form, #cat_title, #change_pass, .error_data div {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 700px) {    
+  #employes, #showTask, #categorys {
+    font-size: 16px;
+  }
+
+  #settings, #wyloguj, #send_email {
+    width: 7%;
+  }
+
+  #logout {
+    padding-left: calc(0% + 0px);
+    padding-right: calc(0% + 0px);
+  }
+
+  #main{
+    padding-left: 5px;
+  }
+
+  #form_input, #tytuł_form, .error_data div {
+    width: 90%;
+  }
+
+  .lds-ring {
+    left: 42%;
+  }
+}
+
+@media only screen and (max-width: 620px){
+  #employes, #showTask, #categorys {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+  #cat_form, #settings_form{
+    width: 100%!important;
+  }
+
+  #wiadomosc{
+      font-size: 12px;
+  }
+
+  #placeholder {
+      height: 85%;
+  }   
+
+  #belka_wyloguj{
+    height: 15%;
+  }
+
+  #main{
+    width: 50.5%;
+    float: left;
+    margin-left: 0px;
+    border-bottom: 1px solid #1e2541;
+  }
+
+  #wyloguj, #settings, #send_email{
+    width: 16.5%;
+    float: right;
+    border-bottom: 1px solid #E1DABE;
+  }
+
+  #main, #wyloguj, #settings, #send_email{
+    top:0;
+    height: 50%;
+  }
+
+  #employes, #showTask, #categorys{
+    height: 50%;
+    width: 33.33333%;
+  }
+
+  #przyciski button {
+    width: 100%;
+    height: 50px;
+  }
+
+  #filtry{
+    display: block;
+    position: relative;
+  }
+
+  #filtr_div_f{
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+
+  #cat_form, #ad_form, #emp_form, #settings_form, #folder {
+    width: 100%;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  #ogloszenia, #lista, #lista_kategorii {
+    padding-bottom: 10px;
+  }
+
+  #cat_title, #cat_inp{
+    width: 90% 
+  }
+
+  #form_form {
+    margin-top: 0px;
+    padding-top: 20px;
+  }
+
+  #password_show{
+    background-color: transparent;
+  }
+
+  .pole, .pole_opis{
+    width: 95%;
+    margin-left: 5%;
+    background-position: 0px 85%;
+  }
+
+  .error_data  {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+
+  .error_data div {
+    width: 90%;
+  }
+
+
+  #ad_form, #emp_form, #cat_form, #settings_form, #folder{
+    padding: 30px 20px 30px 20px;
+  }
+
+  #send {
+    top: 31px;
+    right: 21px;
+  }
+
+  #formularz{
+    width: 100%;
+    padding: 20px 25px 20px 25px;
+  }
+
+  #ad_title, #emp_title {
+    font-size: 16px; 
+  }
+
+  #tytuł_form{
+    width: 85.7%;
+    padding-left: 13%;
+  }
+
+  #change_pass {
+      width: 85.7%;
+      margin-bottom: 10px;
+  }
+
+  #employes, #showTask, #categorys, #main {
+    font-size: 16px;
+  }
+
+  .objekt #usuń{
+    visibility: visible;
+  }
+
+  .ogloszenie, .usser {
+    min-width: 100px;
+  }
+
+  .lds-ring {
+    left: 44%;
+  }
+
+}
+
+@media only screen and (max-width: 540px) { 
+  #change_pass {
+      width: 85%;
+  }
+
+}
+
+@media only screen and (max-width: 500px) { 
+  .podglad{
+    min-width: 300px;
+  }
+
+  #task_btns button, .objekt button, #usser_btn button {
+    width: 70px;
+  } 
+
+  .pole{
+    background-position: 20px 85%;
+    margin-left: 0%;
+  }
+
+  .pole_opis {
+    background-position: 20px 85%!important;
+    margin-left: 0%;
+  }
+
+  #form_input, .error_data div {
+    width: 85%;
+  }
+
+  #tytuł_form {
+    width: 86%;
+  }
+
+  #change_pass {
+    width: 90.5%;
+  }
+
+  .lds-ring {
+    left: 43%;
+  }
+
+  button:hover .tooltip {
+    visibility: hidden;
+  }
+
+  .error_data {
+    margin-left: unset;
+  }
+
+}
+
+@media only screen and (max-width: 400px) { 
+  .podglad{
+    min-width: 250px;
+  }
+
+  #task_btns {
+    float: none!important;
+    margin-top: 30px;
+  }
+
+  #edytuj a {
+    margin-left: 15px;
+  }
+  #settings_form .pole, .pole_opis {
+    background-position: 5px 100%;
+  }
+
+  .pole {
+    background-position: 5px 85%;
+  }
+
+  .pole_opis {
+    background-position: 5px 80%!important;
+  }
+
+  #ad_form label, #emp_form label, #category_new label, #settings_form label {
+    font-size: 12px;
+  }
+
+  .lds-ring {
+    top: 43%;
+    left: 36%;
+  }
+
+  #send {
+    background-size: 15px 15px;
+    width: 15px;
+    height: 15px;
+    top: 33px;
+    right: 21px;
+  }
+
+  #folder h1 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 320px) { 
+#task {
+  padding: 0px 10px 0px 10px;
+} 
+
+.usser {
+  padding: 10px 10px 20px 10px;
+}
+
+.ogloszenie, .usser {
+  margin: 20px 0px 20px 0px;
+}
+
+#schow_info {
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  top: 5px;
+  right: 5px;
+}
+
+.ogloszenie, .usser {
+  padding: 10px 10px 40px 10px;
+}
+
+#tytuł_form {
+  width: 82%;
+}
+
+.podglad{
+  min-width: 220px;
+}
+
+#category_new {
+  background-size: 13px 13px;
+}
+
+#employes, #showTask, #categorys, #main {
+  font-size: 14px;
+}
+
+#emp_btns button {
+  background-size: 15px 15px;
+}
+#ad_title, #emp_title{
+  font-size: 14px;
+}
+
+#form_input, #tytuł_form {
+  width: 85%;
+} 
+
+#cat_inp{
+  width: 80%;
+}
+
+#category_new {
+  background-position: 10% 100%;
+}
+
+#tytuł_form{
+  padding-left: 5%;
+}
+
+#cat_title {
+  width: 80%;
+  padding-left: 8%;
+}
+
+#str_tytułowa h1 {
+  font-size: x-large;
+}
+
+.lds-ring {
+  left: 34%;
+}
+
+.error_data div {
+  width: 83%;
+}
+}
+
+@media only screen and (max-width: 280px) { 
+  .lds-ring {
+    left: 30%;
+  }
+
+.ogloszenie{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+#task_btns{
+  height: 60px;
+  margin-top: 0px;
+}
+
+#cat_title, #ad_title, #emp_title, #settings_title {
+    font-size: 12px;
+}
+
+#employes, #showTask, #categorys, #main {
+  font-size: 12px;
+}
+
+#ad_btns button, #emp_btns button {
+  width: 18px;
+  height: 15px;
+}
+
+#emp_btns button {
+  background-size: 13px 13px;
+}
+
+#task_btns #usuń {
+   width: 70px;
+   background-position: 5px 50%;
+}
+
+#settings_form #form_input {
+  width: 85%;
+}
+
+#change_pass {
+  width: 86%;
+}
+
+#cat_form{
+  padding: 30px 20px 30px 0px;
+}
+#form_input, #tytuł_form {
+  width: 83%;
+}
+.pole, .pole_opis {
+  background-size: 13px 13px;
+}
+
+#folder h1 {
+  font-size: 14px;
+}
+
+#send {
+  top: 32px;
+}
+
+}
+
+@media only screen  and (max-width: 850px)  and (max-height: 540px) and (orientation: landscape) {
+  #employes, #showTask, #categorys {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #belka_wyloguj {
+    height: 10%;
+  }
+
+  #placeholder {
+    height: 90%;
+  }
+
+
+  #wiadomosc{
+      font-size: 12px;
+  }
+
+  #filtr_div_f {
+    width: 130px;
+  }
+
+  #settings, #wyloguj, #send_email, #send_email {
+    background-size: 15px 15px;
+  }
+
+  #employes, #showTask, #categorys, #main {
+    font-size: 14px;
+  }
+
+  .pole {
+    background-position: 0px 90%;
+  }
+
+  .pole_opis {
+    background-position: 0px 90%!important;
+  }
+}
+
+@media only screen  and (max-width: 580px) and (max-height: 320px) and (orientation: landscape) {
+  #belka_wyloguj {
+    height: 20%;
+  }
+  #placeholder {
+    height: 80%;
+  }
+
+  #filtr_div_f {
+    width: 110px;
+  }
+
+  #filtry {
+      display: inline-flex;
+  }
+
+  #settings, #wyloguj, #send_email, #send_email {
+    background-size: 12px 12px;
+  }
+
+  #wyloguj, #settings, #send_email {
+    width: 10%;
+  }
+
+  #main{
+    width: 70%;
+  }
+}
+
+

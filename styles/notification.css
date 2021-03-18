@@ -1,0 +1,77 @@
+#powiadomienie{
+    display: inline-flex;
+    position:absolute;
+    width: 500px;
+    height: 100px;
+    bottom:0px;
+    right:0px;
+    margin-bottom: 10px;
+    background-color: #7F9A56;
+    border-radius: 8px 0px 0px 8px;
+  }
+  
+  #icon{
+    position: relative;
+    width: 100px;
+    height: auto;
+    border-right: 1px solid white;
+  }
+
+  #icon_file{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
+
+  #tytuł_msg{
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    height: 50%;
+    padding-top: 15px;
+    margin: 0px;
+  }
+  
+  #wiadomosc{
+    position: relative;
+    text-align: center;
+    height: 50%;
+  }
+  
+  #wiadomosc a, #tytuł_msg a{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  #msg{
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 900px) {    
+
+    #powiadomienie{
+      width: 100%;
+      margin-bottom: 0px;
+      border-radius: 0px 0px 0px 0px;
+    }
+
+    #tytuł_msg{
+      margin-top: 10px;
+      font-size: 16px;
+      height: 30%;
+    }
+
+    #wiadomosc{
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+   
+  }

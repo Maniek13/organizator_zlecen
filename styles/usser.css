@@ -1,0 +1,948 @@
+html, body {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+
+button, select, #file{
+  cursor: pointer ;
+}
+
+#admin{
+  background-color: transparent;
+}
+
+#tytuł{
+  margin-top: 40px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.tooltip {
+  visibility: hidden;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 0px;
+  background-color: gold;
+}
+
+button:hover .tooltip{
+  visibility: visible;
+}
+
+input, textarea{
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: text ;
+}
+
+input:focus, textarea:focus{
+  border: 0px!important;
+  outline: 1px solid green;
+}
+
+input#wykonano, textarea {
+  padding-bottom: 5px!important;
+}
+
+#form #msg{
+  width: 100%;
+  height: 150px;
+}
+
+textarea{
+  background-color: transparent;
+}
+
+#guzik{
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+}
+
+#form label, #form input{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: small;
+}
+
+.tasks{
+  width: 50%!important;
+}
+
+.tasks a{
+margin-left: 5px;
+}
+
+#tekst_b{
+  width: 100%;
+  position: relative;
+}
+
+#tekst_b p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ikona_d{
+  position: relative;
+  width: 100px;
+  z-index: 1;
+}
+
+#ikona{
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  filter: invert(100%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button, select, label, input, p, h1, div{
+  font-family: 'Roboto', sans-serif;
+  border: 0px;
+}
+
+#form{
+  position: relative;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 30px 15px 15px 25px!important;
+  border-radius: 5px;
+}
+
+#form input{
+  margin: 5px 0px 5px 0px;
+}
+
+#task_msg{
+  text-align: center;
+}
+
+#formularz #task_msg p{
+  padding-left: 0px;
+  text-align: center;
+}
+
+#formularz input{
+  margin-bottom: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: transparent;
+}
+
+#form input{
+  border-bottom: 1px solid rgba(184, 184, 184, 0.549);
+}
+
+#formularz p{
+  padding-left: 35px;
+  text-align: left;
+  box-sizing: border-box;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+
+#div_wykonano {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#tytuł{
+  text-align: center!important;
+  padding: 0px 0px 20px 0px!important;
+  border-bottom: 1px solid #1e2541;
+}
+
+#ogloszenia article:only-child{
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#task #tytuł{
+  height: 50px;
+}
+
+#main{
+  position: absolute;
+  background-color: transparent;
+  border: 0px;
+  z-index: 1;
+  width: 100%;
+}
+
+#belka{
+  background-color: #151A2E;
+  border: 1px solid #1e2541;
+  color: white;
+}
+
+#belka, #main{
+  padding: 0 20% 0 20%;
+  height: 5%;
+}
+
+#wyloguj, #settings, #send_email, #unfinished, #finished{
+  position: relative;
+  float: right;
+  background-color: transparent;
+  border: hidden;
+  height: 100%;
+  z-index: 5;
+}
+
+#unfinished, #finished{
+    font-size: 24px;
+    color: white;
+    width: 200px;
+    float: left;
+}
+
+#settings, #wyloguj, #send_email {
+  width: 7%;
+  filter: invert(100%);
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: 50% 50%;
+}
+
+#send_email {
+  border-left: 1px solid #E1DABE;
+}
+
+#logout{
+  background-color: #151A2E;
+  height: 100%;
+  color: white;
+  border-bottom: 1px solid #1e2541;
+  position: relative;
+}
+
+#placeholder{
+  overflow: auto;
+  height: 95%;
+  position: relative;
+  padding: 0 20% 0 20%;
+}
+
+header {
+  position: relative;
+  background-color: white;
+  height: 100px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  border-radius: 5px;
+}
+
+#task_t{
+  height: 150px!important;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+}
+
+#task_msg{
+  position: relative;
+  background-color: white;
+  height: 100px;
+  text-align: center;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  border-radius: 5px;
+}
+
+#task_msg p{
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#formularz{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+
+#formularz div{
+  padding: 15px;
+  padding-top: 0px;
+}
+
+#wykonano, #opis{
+  width: 95%!important;
+  box-sizing: border-box; 
+  font-size: small;
+  position: relative;
+}
+
+#div_wykonano, #div_opis{
+  position: relative;
+  width: 100%; 
+   padding: 0px!important;
+}
+
+#div_opis{
+  display: inline-block!important; 
+  background-position: 0 10px !important;
+}
+
+#ikona_t{
+  position: relative;
+  float: left;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 0% 50%;
+  margin-top: 11px;
+}
+
+#div_opis #ikona_t{
+  margin-top: 5px;
+}
+
+#formularz textarea {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; 
+  margin: 5px 0px 0px 0px;
+  border: 1px solid #151a2e52;
+}
+
+#inf_incomplete_task, #inf_complete_task, #inf_cancel {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-color: transparent;
+}
+
+#inf_cancel {
+  right: 40px;
+}
+
+#inf_incomplete_task, #inf_complete_task {
+  right: 10px;
+}
+
+#change_password, #set_email, #send{
+  width: 100%!important;
+  height: 35px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article {
+  text-align: center;
+  background-color: white;
+  flex: 200px;
+  position:relative;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  width: 25%;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+article div{
+  display: inline-flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+article label, article p{
+  position: relative;
+  padding-left: 3px;
+  height: auto;
+	overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#task{
+  display: inline-block;
+  height: 70%;
+}
+
+#task_btns #edytuj, #task_btns #anuluj, #task_btns #zakoncz{
+  width: 80px ;
+}
+
+.upload {
+	position: relative;
+  overflow: hidden;
+	padding: 8px!important;
+	text-align: center;
+  font-size: medium;
+  background-color:rgb(89, 96, 130);
+}
+
+.upload div{
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: 15px 15px;
+  width: 100%;
+  padding: 0px!important;
+}
+
+.upload input[type="file"] {
+	position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+	height: 100%;
+  opacity: 0;
+}
+
+#upload-label a{
+  background-color: transparent!important;
+}
+
+#folder{
+  padding-left: 20%!important;
+  padding-right: 20%!important;
+}
+
+textarea::-webkit-scrollbar {
+  width: 2px;
+}
+
+.placeholder::-webkit-scrollbar-thumb, .textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 11, 11);
+}
+
+#task_btns button{
+  color: white;
+  padding: 8px;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-color: transparent!important;
+  background-size: 15px 15px;
+  border: 0px!important;
+  margin: 0px;
+}
+
+#task_btns {
+  float: right;
+  padding: 0!important;
+  margin: 20px 10% 20px 0px;
+  width: auto;
+  height: 20px;
+}
+
+#task_btns a{
+ background-color: transparent!important;
+ color: black;
+ display: inline!important;
+}
+
+.error_data { 
+  color: red;
+  background-color: transparent;
+  width: 100%;
+  padding-top: 5px;
+  font-size: 12px;
+  display: table;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 43%;
+  z-index: 10000;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+#schow_info {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#rozmazanie {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000bd;
+  z-index: 1;
+  top: 0;
+}
+
+.podglad{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  text-align: center;
+  background-color: white;
+  padding: 25px!important;
+  border-radius: 5px;
+  z-index: 1000;
+  padding-top: 30px!important;
+}
+
+.podglad div {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  float: left;
+  padding: 5px 0px 5px 25px!important;
+  width: 90%;
+  text-align: left;
+  margin-bottom: 10px;
+  background-position: 0% 40%!important;
+  font-size: small;
+}
+
+.podglad button#wyłącz {
+  position: absolute;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url('icons/button/pencil.png');
+  right: 10px;
+}
+
+#edytuj a, #anuluj a{
+  margin-left: 5px;
+}
+
+#zakoncz a {
+  margin-left: 15px;
+}
+
+div#opis {
+  overflow: auto;
+  max-height: 210px;
+  word-wrap: break-word;
+  text-align: justify ;
+  background-position: 0px 5px;
+  width: 100%!important;
+}
+
+#password_show{
+  position: absolute;
+  top: 29px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  border: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+#pass_kont{
+  position: relative;
+}
+
+#div_opis textarea, #div_wykonano input{
+  width: 90%!important;
+  margin-left: 5px;
+}
+
+.field-error{
+  border: 0px!important;
+  outline: 1px solid red!important;
+}
+
+#div_opis .error_data, #div_wykonano .error_data {
+  padding-left: 35px;
+}
+
+#div_opis .error_data {
+  padding-top: 0px;
+}
+
+#okno_potwierdzenia {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 250px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 5px 5px 10px 3px #ccc;
+  border-radius: 5px;
+  margin: 0;
+  z-index: 1;
+  min-width: 200px;
+  padding: 10px!important;
+  padding-left: 0px!important;
+}
+
+#okno_potwierdzenia button{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+
+#tak_potw {
+  margin-left: 50px;
+}
+#tekst_potw {
+  margin: 30px 10px 0px 10px;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1500px) {    
+  #placeholder, #belka, #main{
+    padding: 0 10% 0 10%;
+  }
+
+  .lds-ring {
+    left: 43%;
+  }
+
+}
+
+@media only screen and (max-width: 1370px){
+  #wykonano, #opis{
+    width: 94%!important;
+  }
+ }
+
+ @media only screen and (max-width: 1300px) {    
+  #placeholder, #belka, #main{
+    padding: 0 5% 0 5%;
+  }
+}
+
+ @media only screen and (max-width: 1170px){
+  #wykonano, #opis{
+    width: 93%!important;
+  }
+ }
+
+ @media only screen and (max-width: 1100px) {    
+
+  #placeholder, #belka, #main{
+    padding: 0 0 0 0;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {    
+  .lds-ring {
+    left: 45%;
+  }
+}
+
+@media only screen and (max-width: 850px) and (orientation: landscape){
+  #belka, #main {
+    height: 10%;
+  }
+
+  #placeholder{
+    height: 90%!important;
+  }
+
+  button:hover .tooltip {
+    visibility: hidden;
+  }
+
+  #unfinished, #finished {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 660px) and (orientation: landscape){
+  #unfinished, #finished {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  #folder{
+    padding: 0!important;
+  }
+
+  #task_t h1{
+    font-size: 18px;
+  }
+
+  #wyloguj{
+    border-left: 0px!important;
+  }
+
+  #ikona{
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+  }
+
+  .tasks{
+    margin-bottom: 0px!important;
+  }
+
+  #task #tytuł{
+    height: 40px;
+  }
+
+  #task{
+    height: 60%;
+  }
+
+  #wykonano, #opis{
+    width: 95%!important;
+  }
+
+  #wyloguj, #settings, #send_email {
+    border-left: 0px!important;
+    width: 50px;
+  }
+
+  #logout {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #wyloguj, #settings, #send_email{
+    background-size: 20px 20px;;
+  }
+
+  #wykonano, #opis{
+    width: 95%!important;
+  }
+
+  #inf_incomplete_task, #inf_complete_task, #inf_cancel {
+    background-size: 15px;
+  }
+  #task_t {
+    height: 100px!important;
+  }
+
+  #task_t h1, h1 {
+      font-size: 32px;
+  }
+  
+  #task_btns {
+    margin: 20px 5% 20px 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) {    
+  .lds-ring {
+    left: 44%;
+  }
+}
+
+@media only screen and (max-width: 570px) {    
+  .lds-ring {
+    left: 42%;
+  }
+}
+
+@media only screen and (max-width: 652px) {
+  #wykonano, #opis{
+    width: 90%!important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #task_btns {
+    display: block;
+  }
+
+
+  #unfinished, #finished {
+    font-size: 18px;
+    width: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  #unfinished, #finished {
+    font-size: 16px;
+    width: 120px;
+  }
+
+  #div_opis textarea, #div_wykonano input {
+    width: 85%!important;
+  }
+
+  .lds-ring {
+    left: 42%;
+  }
+
+  button:hover .tooltip {
+    visibility: hidden;
+  }
+
+}
+
+@media only screen and (max-width: 420px) {    
+  .lds-ring {
+    left: 33%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #belka, #main {
+    height: 15%;
+  }
+  #placeholder {
+    height: 85%;
+  }
+
+  #wyloguj, #settings, #send_email{
+    width: 33%;
+  }
+
+  #wyloguj, #settings, #send_email, #unfinished, #finished {
+    height: 50%;
+  }
+
+  #unfinished, #finished {
+   border-bottom: 1px solid #1e2541;
+   width: 50%;
+   text-align: center;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #wykonano, #opis{
+    width: 85%!important;
+  }
+
+  #task_t h1, h1 {
+    font-size: 28px;
+  }
+
+}
+
+@media only screen and (max-width: 352px) {
+  #wykonano, #opis{
+    width: 85%!important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #task_t h1, h1 {
+    font-size: 24px;
+  }
+
+  .lds-ring {
+    left: 30%;
+  }
+
+  .error_data div {
+    margin-right: 5%;
+}
+}
+
+@media only screen and (max-width: 300px) {
+  #task_btns {
+    float: none!important;
+    padding: 0!important;
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+    height: 20px;
+    padding-left: 5px!important;
+  }
+
+  #task_t h1, h1 {
+    font-size: 28px;
+  }
+
+  #div_opis textarea, #div_wykonano input {
+    width: 80%!important;
+  }
+
+}
