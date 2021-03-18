@@ -1,4 +1,4 @@
-#Organizator Zleceń
+# Organizator Zleceń
 
 1.	Zainstalować aplikacje xampp (https://www.apachefriends.org/pl/index.html)
 2.	Skopiować folder praca do folderu htdocs, znajdującego się w folderze xampp. Domyślnie “C:\xampp\htdocs”.
