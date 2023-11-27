@@ -16,6 +16,10 @@ changing “listenaddress=0.0.0.0” to the external IP, if we have one. This al
 Preview page:
 http://178.235.60.107:4422/TaskOrganization/main.html
 
+Login data:
+Login: Admin 
+Password: 12345
+
 
 Administration
 
