@@ -57,7 +57,7 @@ async function php(name, params, ofset, file){
 	
 	name = 'php/' + name;
 
-	var url = `${'php/'.name}?${params}`;
+	var url = `${name}?${params}`;
 
 	http.open('POST', url, true);
 	http.send(formData);
