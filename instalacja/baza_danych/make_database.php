@@ -1,10 +1,5 @@
 <?php
-
-$db_servername="localhost";
-$db_username = "root";
-$db_password = "";
-$status = "";
-$db = "my_job";
+require_once "connection.php";
 
 $polaczenie = new mysqli($db_servername, $db_username, $db_password);
 
@@ -39,7 +34,7 @@ else
                 localNr TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
                 city TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
                 password TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
-                changed tinyint(1) NOT NULL,
+                changed tinyint(1) NOT NULL DEFAULT 0,
                 login TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL
             )";
 
@@ -55,7 +50,7 @@ else
                 description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
                 status TINYINT(1) NOT NULL,
                 taskDate DATETIME NOT NULL,
-                taskEndDate DATETIME NOT NULL,
+                taskEndDate DATETIME NULL,
                 workerId INT(11) NOT NULL
             )";
 

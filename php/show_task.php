@@ -1,24 +1,29 @@
 <?php
-require_once "connection.php";
-$polaczenie = new mysqli($db_servername, $db_username, $db_password, $db_name);
+try{
+	require_once "connection.php";
+	$polaczenie = new mysqli($db_servername, $db_username, $db_password, $db_name);
 
-if ($polaczenie->connect_errno!=0) {
-	$status = "Błąd: ".$polaczenie->connect_errno;
-}
-else{
-	$sql = "SELECT * FROM tasks LEFT JOIN taskCategory ON categoryId  = catId LEFT JOIN workers ON workersId  = workerId ORDER BY taskId ASC";
-
-	
-
-	if($wynik = $polaczenie->query($sql)){
-		$status = $wynik->fetch_all();
+	if ($polaczenie->connect_errno!=0) {
+		$status = "Błąd: ".$polaczenie->connect_errno;
 	}
 	else{
-		$status = "Błąd polaczenia";
-	}
-} 
+		$sql = "SELECT * FROM tasks LEFT JOIN taskCategory ON categoryId  = catId LEFT JOIN workers ON workersId  = workerId ORDER BY taskId ASC";
 
-$polaczenie->close();	
-$myJSON = json_encode($status);
-echo $myJSON;
+		
+
+		if($wynik = $polaczenie->query($sql)){
+			$status = $wynik->fetch_all();
+		}
+		else{
+			$status = "Błąd polaczenia";
+		}
+	} 
+
+	$polaczenie->close();	
+	$myJSON = json_encode($status);
+	echo $myJSON;
+}
+catch(Exception $e){
+	echo json_encode($e->getMessage()); die();
+}
 ?>

@@ -58,9 +58,14 @@ async function php(name, params, ofset, file){
 	name = 'php/' + name;
 
 	var url = `${name}?${params}`;
-
-	http.open('POST', url, true);
-	http.send(formData);
+	try{
+		http.open('POST', url, true);
+		http.send(formData);
+	}
+	catch (error) {
+		console.error(error);
+	}
+	
 
 	let promise = new Promise((resolve, reject) => {
 		setTimeout(() => resolve(odp), ofset);

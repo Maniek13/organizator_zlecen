@@ -40,7 +40,6 @@ async function php(name, params, ofset, file){
 	let promise = new Promise((resolve, reject) => {
 		setTimeout(() => resolve(odp), ofset)
 	});
-
 	let result = await promise;
 	return result;
 }

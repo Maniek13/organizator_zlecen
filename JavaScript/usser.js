@@ -829,30 +829,33 @@ function taskInformationForm(wynik, status){
 	f.appendChild(nrTelefonu);
 	f.appendChild(data);
 
-	if(status == '0'){
-		let wykonano = document.createElement("input");
-		wykonano.name = "wykonano";
-		wykonano.type = "text";
-		wykonano.id = "wykonano";
-		wykonano.placeholder = wynik[11];
 	
-		wykonano.setAttribute("class", "datepicker-here");
-		wykonano.setAttribute("data-timepicker", "true");
-		wykonano.setAttribute("data-time-format", 'hh:ii');
-		wykonano.setAttribute("data-position",'top left');
+	// if(status == '0'){
+	// 	let wykonano = document.createElement("input");
+	// 	wykonano.name = "wykonano";
+	// 	wykonano.type = "text";
+	// 	wykonano.id = "wykonano";
+	
+	// 	wykonano.placeholder = wynik[11];
+	
+	// 	wykonano.setAttribute("class", "datepicker-here");
+	// 	wykonano.setAttribute("data-timepicker", "true");
+	// 	wykonano.setAttribute("data-time-format", 'hh:ii');
+	// 	wykonano.setAttribute("data-position",'top left');
 		
-		let wykonanoLab = document.createElement("div");
-		wykonanoLab.id = "div_wykonano";
+	// 	let wykonanoLab = document.createElement("div");
+	// 	wykonanoLab.id = "div_wykonano";
 
-		let ikona = document.createElement("div");
-		ikona.id = "ikona_t";
-		ikona.style.backgroundImage = 'url("icons/date.png")';
+	// 	let ikona = document.createElement("div");
+	// 	ikona.id = "ikona_t";
+	// 	ikona.style.backgroundImage = 'url("icons/date.png")';
 
-		wykonanoLab.appendChild(ikona);
-		wykonanoLab.appendChild(wykonano);
-		f.appendChild(wykonanoLab);
-	}
-	else if(status == '1'){
+	// 	wykonanoLab.appendChild(ikona);
+	// 	wykonanoLab.appendChild(wykonano);
+	// 	f.appendChild(wykonanoLab);
+	// }
+	
+	if(status == '1'){
 		let wykonano = document.createElement("p");
 		wykonano.style.backgroundImage = 'url("icons/date.png")';
 		wykonano.innerText = wynik[11];

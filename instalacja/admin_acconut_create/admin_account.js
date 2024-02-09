@@ -45,7 +45,7 @@ async function php(name, params, ofset, file){
 }
   
 
-function make_account(){
+function makeAccount(){
     let login = CryptoJS.MD5(document.getElementById("login").value);
 	let hasło = CryptoJS.MD5(document.getElementById("hasło").value);
 	let email = document.getElementById("email").value;
@@ -68,7 +68,7 @@ function make_account(){
 }
 
 
-function on_enter(fields, btn){
+function onEnter(fields, btn){
 	for(i=0; i<fields.length; ++i){
 		let field = document.getElementById(fields[i]);
 		field.addEventListener("keyup", function(event) {
