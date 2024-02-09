@@ -21,6 +21,14 @@
 8.	 Zmienić w pliku “emailconfig.php” odpowiednie wartości, według instrukcji i wkleić go do głównego katalogu z aplikacją
 
 
+Dane do logowanie:
+Admin: 
+    login: Admin
+    password: 12345
+User:
+    login: Test
+    password: 123456
+
 Administracja
 
 <img width="414" alt="image" src="https://user-images.githubusercontent.com/47826375/155571125-b1a15e2f-f2d9-41e1-834c-664db861a0f3.png">
