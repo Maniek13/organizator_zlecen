@@ -7,13 +7,14 @@
         - php
 
     Zawartość pliku connection.php:
-
+/* 
     <?php
         $db_servername="localhost";
         $db_username = "root";
         $db_password = "PhpMy@dmin127";
         $db_name = "my_job";
     ?>
+*/
 
 4.	Uruchomić skrypt o nazwie “make_database.Php”, tworzący bazę danych. Plik znajkduje się w folderze instalacja/bazadanych
 5.	Utworzyć konto administratora, poprzez uruchomienie pliku “create_admin_acount.Html”. Plik znajduje się w folderze instalacja/admin_account_create
