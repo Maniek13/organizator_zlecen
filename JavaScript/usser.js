@@ -923,17 +923,9 @@ function taskInformationForm(wynik, status){
 	let opisReg =  /^[\na-zA-ZąćęłńóśóżźĄĆĘŁŃÓŚŹŻ0-9:@!#$%^&*(),. -]{3,}$/; 
 	let opisMsg = "Prosze wpisać poprawnie opis. Dozwolone litery, cyfry, spacja oraz znaki: :@!#$%^&*(),.- i enter.";
 
-	let fields = [opis_field];
+	let fields = [opisField];
 	
-	if(status == '0'){
-		let wykonanoField = "#wykonano";
-		let wykonanoReg = /^[0-9 :-]{16,16}$/;
-		let wykonanoMsg = "Wybierz datę";
-	
-		fields = [opisField, wykonanoField];
 
-		błąd(wykonanoField, wykonanoReg, wykonanoMsg, fields, button);
-	}
 	
 	błąd(opisField, opisReg, opisMsg, fields, button);
 	
